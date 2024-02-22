@@ -53,5 +53,16 @@ FOREIGN KEY (STAFF_ID) REFERENCES STAFF(STAFF_ID)
 );
 
 CREATE ROLE staff_till WITH PASSWORD 'tillpassword';
+CREATE ROLE kitchen_till WITH PASSWORD 'kitchenpassword';
+
 GRANT INSERT ON orders TO staff_till;
 GRANT INSERT ON orders_items TO staff_till;
+
+GRANT UPDATE ON orders TO staff_till;
+GRANT UPDATE ON orders_items TO staff_till;
+
+GRANT SELECT ON orders TO staff_till;
+GRANT SELECT ON orders_items TO staff_till;
+
+GRANT SELECT ON orders to kitchen_till;
+GRANT UPDATE ON orders TO kitchen_till;
