@@ -52,8 +52,8 @@ FOREIGN KEY (ROLE_ID) REFERENCES ROLE(ROLE_ID),
 FOREIGN KEY (STAFF_ID) REFERENCES STAFF(STAFF_ID)
 );
 
-CREATE ROLE staff_till WITH PASSWORD 'tillpassword';
-CREATE ROLE kitchen_till WITH PASSWORD 'kitchenpassword';
+CREATE ROLE staff_till WITH PASSWORD 'Setap6C!!';
+CREATE ROLE kitchen_till WITH PASSWORD 'Setap6C!!';
 
 GRANT INSERT ON orders TO staff_till;
 GRANT INSERT ON orders_items TO staff_till;
