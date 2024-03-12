@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web/payment/Order.dart';
-import 'package:flutter_web/payment/Item.dart';
+import 'package:automation_software_flutter_code/payment/Order.dart';
+import 'package:automation_software_flutter_code/payment/Item.dart';
 
 class PaymentPage extends StatelessWidget {
   const PaymentPage({super.key, required this.title});
