@@ -39,19 +39,19 @@ List<Item> data = [
       'https://pic1.zhimg.com/v2-36f3a88e38fbb666f7499970ee352c30_r.jpg',
       'food describe',
       2.5,
-      1),
+      0),
   Item.create(
       'Food2',
       'https://img1.qunarzz.com/travel/poi/1504/74/5ba799767d759.jpg_720x300x95_bc513f62.jpg',
       'food describe',
       2.5,
-      1),
+      0),
   Item.create(
       'Food3',
       'https://pic3.zhimg.com/v2-2b5a3ef5358d2569fd74b09ca1480c93_720w.jpg?source=172ae18b',
       'food describe',
       2.5,
-      1),
+      0),
   Item.create(
       'Food4',
       'https://ts1.cn.mm.bing.net/th/id/R-C.bff2d511a661'
@@ -60,7 +60,7 @@ List<Item> data = [
           '53jtjBd7pb9y1pnts0%3d&risl=&pid=ImgRaw&r=0',
       'food describe',
       2.5,
-      1),
+      0),
   Item.create(
       'Food5',
       'https://ts1.cn.mm.bing.net/th/id/R-C.9b585c1dddaf1bd0de5a26ebfeeaf65b?rik=QX2%2f'
@@ -68,13 +68,13 @@ List<Item> data = [
           'k=Gv5XcJd9CUvI6HT9GodaS8j95TstxcUJhZUcF0CGTmY%3d&risl=&pid=ImgRaw&r=0',
       'food describe',
       2.5,
-      1),
+      0),
   Item.create(
       'Food6',
       'https://img1.qunarzz.com/travel/poi/1504/74/5ba799767d759.jpg_720x300x95_bc513f62.jpg',
       'food describe',
       2.5,
-      1),
+      0),
   Item.create(
       'Food7',
       'https://ts1.cn.mm.bing.net/th/id/R-C.6199fe2964303a1b0b8f3a104fafa5ea?rik=xu1%2'
@@ -83,13 +83,13 @@ List<Item> data = [
           'd&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
       'food describe',
       2.5,
-      1),
+      0),
   Item.create(
       'Food8',
       'https://tse4-mm.cn.bing.net/th/id/OIP-C.QsKfWD30J1eFvFU9_lR3WwAAAA?rs=1&pid=ImgDetMain',
       'food describe',
       2.5,
-      1),
+      0),
 ];
 
 class _ItemListState extends State<ItemList> {
