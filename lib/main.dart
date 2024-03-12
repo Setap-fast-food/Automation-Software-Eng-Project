@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:automation_software_flutter_code/payment/payment.dart';
+import 'payment.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,4 +22,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
