@@ -5,7 +5,9 @@ import 'firebase_options.dart';
 
 void main() async {
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
+    //options: DefaultFirebaseOptions.android, // if you're using windows emulator
+    //options: DefaultFirebaseOptions.ios, // if you're using windows emulator
+    options: DefaultFirebaseOptions.web, // for web
   );
   runApp(const MyApp());
 }

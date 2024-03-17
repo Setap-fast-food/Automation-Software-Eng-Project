@@ -1,0 +1,13 @@
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/icudtl.dat
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/flutter_windows.dll
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/firebase_core_plugin.lib
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin.json
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+S:/Github/Automation-Software-Eng-Project/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag
