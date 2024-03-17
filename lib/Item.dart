@@ -1,6 +1,4 @@
-
 class Item {
-
   final String name;
   final String url;
   final String describe;

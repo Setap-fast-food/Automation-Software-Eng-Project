@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "5428660004",
+    "firebase_url": "https://setap6c-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "setap6c",
+    "storage_bucket": "setap6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5428660004:android:9c8be7e212a7b65476d5b1",
+        "android_client_info": {
+          "package_name": "com.example.automation_software_flutter_code"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEteEikQn6vHBhydo0EI6ereEmTCTd0p4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

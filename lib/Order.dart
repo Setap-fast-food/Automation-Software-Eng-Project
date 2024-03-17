@@ -1,8 +1,6 @@
-
 import 'Item.dart';
 
 class Order {
-
   List<Item> list;
   late num total;
 
