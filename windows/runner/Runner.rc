@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "kitchen_screen" "\0"
+            VALUE "FileDescription", "automation_software_flutter_code" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "kitchen_screen" "\0"
+            VALUE "InternalName", "automation_software_flutter_code" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "kitchen_screen.exe" "\0"
-            VALUE "ProductName", "kitchen_screen" "\0"
+            VALUE "OriginalFilename", "automation_software_flutter_code.exe" "\0"
+            VALUE "ProductName", "automation_software_flutter_code" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
