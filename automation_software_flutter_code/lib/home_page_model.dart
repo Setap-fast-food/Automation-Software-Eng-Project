@@ -1,9 +1,8 @@
 import '/components/heading_panel_widget.dart';
-import '/components/main_panel_widget.dart';
 import '/components/side_bar_widget.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
-import 'components/main_panel_model.dart';
-import 'home_page_widget.dart' show HomePageWidget;
+import '/components/main_panel_model.dart';
+import '/home_page_widget.dart' show HomePageWidget;
 import 'package:flutter/material.dart';
 
 

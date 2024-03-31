@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
-import 'package:kitchen_screen/components/side_bar_widget.dart';
+import 'side_bar_widget.dart';
 
 class SideBarModel extends FlutterFlowModel<SideBarWidget> {
   late List<bool> _selectionStatus;

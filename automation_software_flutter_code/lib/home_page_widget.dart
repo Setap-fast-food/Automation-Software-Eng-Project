@@ -5,8 +5,8 @@ import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
 
 
-import 'home_page_model.dart';
-export 'home_page_model.dart';
+import '/home_page_model.dart';
+export '/home_page_model.dart';
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({super.key});
