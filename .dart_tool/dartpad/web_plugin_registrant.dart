@@ -8,11 +8,13 @@
 
 import 'package:firebase_core_web/firebase_core_web.dart';
 import 'package:firebase_database_web/firebase_database_web.dart';
+import 'package:rive_common/rive_web.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void registerPlugins([final Registrar? pluginRegistrar]) {
   final Registrar registrar = pluginRegistrar ?? webPluginRegistrar;
   FirebaseCoreWeb.registerWith(registrar);
   FirebaseDatabaseWeb.registerWith(registrar);
+  RivePlugin.registerWith(registrar);
   registrar.registerMessageHandler();
 }
