@@ -1,10 +1,16 @@
-# Automation-Software-Eng-Project
-Software Engineering project based on a fast food restaurant receipt system
+# automation_software_flutter_code
 
-Contributors:
-up2122296 - JamieB0           - Jamie
-up2114856 - wherearemysocks11 - Zachary
-up2118131 - ECU24             - Ethan
-up2067018 - Connor            - Connor
-up2134268 -                   - PengCheng
-up2049416 - Leon Htin-Kyaw    - Leon
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

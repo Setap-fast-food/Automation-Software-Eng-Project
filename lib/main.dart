@@ -1,3 +1,5 @@
+import 'package:automation_software_flutter_code/home_page_widget.dart';
+import 'package:automation_software_flutter_code/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'payment.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,7 +27,11 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(151, 71, 255, 1)),
         useMaterial3: true,
       ),
-      home: const PaymentPage(title: 'Your Order'),
+      routes: {
+        '/' : (context) => const WelcomePage(title: "Scenario Selection"),
+        '/staff_till': (context) => const PaymentPage(title: "Your Order"),
+        '/kitchen': (context) => const HomePageWidget()
+      },
     );
   }
 }
