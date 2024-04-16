@@ -272,7 +272,9 @@ class _ItemListState extends State<ItemList> {
                     height: 50,
                     minWidth: 150,
                     color: Theme.of(context).colorScheme.primary,
-                    onPressed: () {},
+                    onPressed: () {
+                      order.placeOrder();
+                    },
                     autofocus: true,
                     child: const Text(
                       'Pay',
