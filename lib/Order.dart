@@ -32,4 +32,8 @@ class Order {
       'price': total,
     });
   }
+
+  void submitOrder(Order order) {
+
+  }
 }
