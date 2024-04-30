@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'side_bar_model.dart';
 export 'side_bar_model.dart';
+import 'main_panel_widget.dart';
 
 class SideBarWidget extends StatefulWidget {
   const SideBarWidget({Key? key}) : super(key: key);
@@ -37,7 +38,8 @@ class _SideBarWidgetState extends State<SideBarWidget> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Expanded( // Wrap the Column with Expanded
+          Expanded(
+            // Wrap the Column with Expanded
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -52,35 +54,35 @@ class _SideBarWidgetState extends State<SideBarWidget> {
     );
   }
 
-Widget _buildOption(int index, String title) {
-  return GestureDetector(
-    onTap: () {
-      setState(() {
-        _model.setSelectedIndex(index);
-        switch (index) {
-          case 0:
-            // RETRIEVE ORDERS THAT ARE ACTIVE AND LIST
-            break;
-          case 1:
-            // RETRIEVE ORDERS THAT ARE COMPLETED AND LIST
-            break;
-          case 2:
-            // MENU EDITING
-            break;
-        }
-      });
-    },
-    child: Container(
-      width: double.infinity,
-      height: 85,
-      decoration: BoxDecoration(
-        color: _model.selectedIndex == index
-            ? Colors.grey.withOpacity(0.6)
-            : FlutterFlowTheme.of(context).secondaryBackground,
-        border: Border.all(
-          color: FlutterFlowTheme.of(context).primaryText,
+  Widget _buildOption(int index, String title) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _model.setSelectedIndex(index);
+          switch (index) {
+            case 0:
+              flag = 'active';
+              break;
+            case 1:
+              flag = 'completed';
+              break;
+            case 2:
+              // MENU EDITING
+              break;
+          }
+        });
+      },
+      child: Container(
+        width: double.infinity,
+        height: 85,
+        decoration: BoxDecoration(
+          color: _model.selectedIndex == index
+              ? Colors.grey.withOpacity(0.6)
+              : FlutterFlowTheme.of(context).secondaryBackground,
+          border: Border.all(
+            color: FlutterFlowTheme.of(context).primaryText,
+          ),
         ),
-      ),
         child: Center(
           child: Text(
             title,
