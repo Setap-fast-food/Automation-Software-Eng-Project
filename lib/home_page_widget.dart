@@ -4,7 +4,6 @@ import '/components/side_bar_widget.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
 
-
 import '/home_page_model.dart';
 export '/home_page_model.dart';
 

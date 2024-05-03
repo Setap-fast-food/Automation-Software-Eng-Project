@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'keypad.dart';
-import '/home_page_widget.dart';
+import '../home_page_widget.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key, required this.title}) : super(key: key);

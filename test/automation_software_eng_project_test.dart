@@ -1,28 +1,33 @@
+import 'package:automation_software_flutter_code/payment.dart';
+import 'package:automation_software_flutter_code/Order.dart';
+import 'package:automation_software_flutter_code/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:automation_software_flutter_code/main.dart';
+import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
+import 'package:automation_software_flutter_code/components/main_panel_widget.dart';
 
-class automation_software_eng_project {
-  int add(int a, int b) {
-    return a + b;
-  }
-
-  int subtract(int a, int b) {
-    return a - b;
-  }
-
-  int multiply(int a, int b) {
-    return a * b;
-  }
-}
-
-void main() {
-  group('Test all methods of automation_software_eng_project', () {
-    test('Test add 2 positive integers', () {
-      automation_software_eng_project math = automation_software_eng_project();
-      expect(math.add(0, 3), equals(3));
-    });
-    test('Test add 2 negative integers', () {
-      automation_software_eng_project math = automation_software_eng_project();
-      expect(math.add(-1, -3), equals(-4));
+void main() async {
+  group('All tests of automation_software_eng_project', () {
+    test('Test: placeOrder() - should be able to place an order', () async {
+      Order instance1 = Order.create(data);
+      String x = await instance1.placeOrder(true);
+      expect(x, 'Test Success');
+      expect(instance1.name, 'JoeBlogs');
     });
   });
 }
+
+/*
+
+void main() async {
+  final instance = FakeFirebaseFirestore();
+  await instance.collection('users').add({
+    'username': 'Bob',
+  });
+  final snapshot = await instance.collection('users').get();
+  print(snapshot.docs.first.get('username')); // 'Bob'
+}
+
+*/
