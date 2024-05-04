@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+Key clearButtonKey = GlobalKey();
+
 class NumericKeypad extends StatefulWidget {
   final TextEditingController controller;
 
@@ -52,7 +54,7 @@ class _NumericKeypadState extends State<NumericKeypad> {
         ),
         Row(
           children: [
-            _buildButton('Clear', onPressed: _clear),
+            _buildClearButton('Clear', onPressed: _clear),
             _buildButton('0'),
             _buildButton('⌫', onPressed: _backspace),
           ],
@@ -65,6 +67,23 @@ class _NumericKeypadState extends State<NumericKeypad> {
   // Individual keys
   Widget _buildButton(String text, {VoidCallback? onPressed}) {
     return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: TextButton(
+          onPressed: onPressed ?? () => _input(text),
+          child: Text(text),
+          style: ButtonStyle(
+            backgroundColor:
+                MaterialStateProperty.all<Color>(Colors.grey[300]!),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildClearButton(String text, {VoidCallback? onPressed}) {
+    return Expanded(
+      key: clearButtonKey,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextButton(
