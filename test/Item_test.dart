@@ -3,7 +3,7 @@ import 'package:automation_software_flutter_code/Item.dart';
 
 void main() {
   group('Item Class Tests', () {
-    test('Initialisation Test', () {
+    test('Item.create() - Initialisation Test', () {
       const name = 'Food1';
       const url =
           'https://pic1.zhimg.com/v2-36f3a88e38fbb666f7499970ee352c30_r.jpg';
