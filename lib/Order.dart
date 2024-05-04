@@ -11,7 +11,7 @@ class Order {
   Order.create(this.list) {
     name = 'JoeBlogs';
     total = getTotal();
-    status = 'completed';
+    status = 'active';
   }
 
   num getTotal() {
