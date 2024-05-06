@@ -1,6 +1,7 @@
 import 'order_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 import 'main_panel_model.dart';
 
@@ -47,7 +48,10 @@ class _MainPanelWidgetState extends State<MainPanelWidget> {
     ));
   }
 
-  
+  void main() async {
+    _addNewOrder();
+    expect(_model.orderDataList.length, 1);
+  }
 
 
 
