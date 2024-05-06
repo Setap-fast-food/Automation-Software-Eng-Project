@@ -5,8 +5,10 @@ import 'keypad.dart';
 import '../home_page_widget.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key, required this.title}) : super(key: key);
+  LoginPage({Key? key, required this.title}) : super(key: key);
   final String title;
+  static final GlobalKey loginButtonKey = GlobalKey();
+  final TextEditingController _pinController = TextEditingController();
 
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -14,17 +16,11 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   late TextEditingController _pinController; // Define controller for PIN field
-
+  static final GlobalKey loginButtonKey = LoginPage.loginButtonKey;
   @override
   void initState() {
     super.initState();
     _pinController = TextEditingController(); // Initialize controller
-  }
-
-  @override
-  void dispose() {
-    _pinController.dispose(); // Dispose controller
-    super.dispose();
   }
 
   @override
@@ -147,47 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                                           ),
                                         ),
                                       ),
-                                      FFButtonWidget(
-                                        onPressed: () {
-                                          if (_pinController.text.length == 4 &&
-                                              _pinController.text == '1234') {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    HomePageWidget(),
-                                              ),
-                                            );
-                                          } else {
-                                            print("Invalid pin code");
-                                          }
-                                        },
-                                        text: 'Login',
-                                        options: FFButtonOptions(
-                                          height: 40,
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  24, 0, 24, 0),
-                                          iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 0, 0, 0),
-                                          color: Color(0xFF09A433),
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: Colors.white,
-                                                  ),
-                                          elevation: 3,
-                                          borderSide: BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                        ),
-                                      ),
+                                      _loginButton(_pinController)
                                     ],
                                   ),
                                 ),
@@ -216,6 +172,39 @@ class _LoginPageState extends State<LoginPage> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _loginButton(_pinController) {
+    return FFButtonWidget(
+      key: loginButtonKey,
+      onPressed: () {
+        if (_pinController.text.length == 4 && _pinController.text == '1234') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => HomePageWidget(),
+            ),
+          );
+        }
+      },
+      text: 'Login',
+      options: FFButtonOptions(
+        height: 40,
+        padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+        iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+        color: Color(0xFF09A433),
+        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+              fontFamily: 'Readex Pro',
+              color: Colors.white,
+            ),
+        elevation: 3,
+        borderSide: BorderSide(
+          color: Colors.transparent,
+          width: 1,
+        ),
+        borderRadius: BorderRadius.circular(8),
       ),
     );
   }

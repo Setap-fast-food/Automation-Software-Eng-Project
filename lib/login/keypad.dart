@@ -63,8 +63,6 @@ class _NumericKeypadState extends State<NumericKeypad> {
     );
   }
 
-  // 2
-  // Individual keys
   Widget _buildButton(String text, {VoidCallback? onPressed}) {
     return Expanded(
       child: Padding(

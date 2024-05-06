@@ -3,9 +3,11 @@ import 'package:automation_software_flutter_code/payment.dart';
 import 'package:automation_software_flutter_code/Order.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:automation_software_flutter_code/login/login.dart';
+import 'package:automation_software_flutter_code/home_page_widget.dart';
 
 void main() async {
-  test('placeOrder() functionality', () async {
+  test('placeOrder() Functionality', () async {
     Order instance1 = Order.create(data);
     // due to not being able to test on a live database, the
     // only way to test is to run the code on a mock database
@@ -16,18 +18,36 @@ void main() async {
   });
 
   testWidgets('Clear Button Functionality', (WidgetTester tester) async {
-    final controller = TextEditingController();
-    controller.text = '135';
+    TextEditingController controller1 = TextEditingController();
+    controller1.text = '135';
 
     await tester.pumpWidget(MaterialApp(
-      home: NumericKeypad(controller: controller),
+      home: NumericKeypad(controller: controller1),
     ));
 
-    expect(controller.text, '135');
+    expect(controller1.text, '135');
     final clearButtonFinder = find.byKey(clearButtonKey);
 
     await tester.tap(clearButtonFinder);
 
-    expect(controller.text, '');
+    expect(controller1.text, '');
+  });
+
+  testWidgets('FFButtonWidget() (Login Button) Functionality',
+      (WidgetTester tester) async {
+    final TextEditingController mockController = TextEditingController();
+    mockController.text = '1234';
+
+    await tester.pumpWidget(MaterialApp(
+      home: Scaffold(
+        body: LoginPage(title: 'Test'),
+      ),
+    ));
+
+    final Finder loginButton = find.byKey(LoginPage.loginButtonKey);
+
+    await tester.tap(loginButton);
+
+    expect(find.byType(HomePageWidget), findsOneWidget);
   });
 }

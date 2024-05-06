@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => const WelcomePage(title: "Scenario Selection"),
           '/staff_till': (context) => const PaymentPage(title: "Your Order"),
-          '/kitchen': (context) => const LoginPage(title: "Login")
+          '/kitchen': (context) => LoginPage(title: "Login")
         });
   }
 }
