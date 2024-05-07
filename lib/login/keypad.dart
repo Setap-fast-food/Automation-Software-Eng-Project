@@ -1,4 +1,7 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 Key clearButtonKey = GlobalKey();
 
@@ -109,5 +112,15 @@ class _NumericKeypadState extends State<NumericKeypad> {
 
   void _clear() {
     _controller.text = '';
+  }
+
+  void main() async {
+    _controller.text = '123';
+    _backspace();
+    expect(_controller.text, '12');
+
+    _input('12');
+
+    expect(_controller.text, '1212');
   }
 }

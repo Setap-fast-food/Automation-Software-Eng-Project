@@ -100,6 +100,14 @@ class _ItemListState extends State<ItemList> {
     super.initState();
   }
 
+  final TextEditingController _controller = TextEditingController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(children: [
@@ -263,6 +271,16 @@ class _ItemListState extends State<ItemList> {
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: TextField(
+                controller: _controller,
+                decoration: InputDecoration(
+                  labelText: 'Please enter your name',
+                  border: OutlineInputBorder(),
+                ),
               ),
             ),
             Expanded(

@@ -57,4 +57,8 @@ class Order {
           'Test Not Completed - FirebaseFirestore invoked instead of FakeFirebaseFirestore. FirebaseFireStore cannot be used in testing');
     }
   }
+
+  void submitOrder(Order order) {
+
+  }
 }
