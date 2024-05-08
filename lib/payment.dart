@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'Order.dart';
 import 'Item.dart';
 
@@ -92,15 +93,19 @@ List<Item> data = [
       0),
 ];
 
+
 class _ItemListState extends State<ItemList> {
+
+  final TextEditingController _controller = TextEditingController();
   Order order = Order.create(data);
+  String orderName = '';
+  
 
   @override
   void initState() {
     super.initState();
   }
 
-  final TextEditingController _controller = TextEditingController();
 
   @override
   void dispose() {
@@ -277,6 +282,11 @@ class _ItemListState extends State<ItemList> {
               flex: 1,
               child: TextField(
                 controller: _controller,
+                onSubmitted: (String value) {
+                  setState(() {
+                    orderName = _controller.text;
+                  });
+                },
                 decoration: InputDecoration(
                   labelText: 'Please enter your name',
                   border: OutlineInputBorder(),
@@ -291,7 +301,7 @@ class _ItemListState extends State<ItemList> {
                     minWidth: 150,
                     color: Theme.of(context).colorScheme.primary,
                     onPressed: () {
-                      order.placeOrder(false);
+                      order.placeOrder(false, orderName);
                     },
                     autofocus: true,
                     child: const Text(

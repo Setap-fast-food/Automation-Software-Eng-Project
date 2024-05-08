@@ -14,9 +14,8 @@ void main() async {
       // due to not being able to test on a live database, the
       // only way to test is to run the code on a mock database
       // and make sure it doesn't throw errors when executing the code
-      String x = await instance1.placeOrder(true);
+      String x = await instance1.placeOrder(true, 'JoeBlogs');
       expect(x, 'Test Success');
-      expect(instance1.name, 'JoeBlogs');
     });
 
     test('Item.create() - Initialisation Test', () {

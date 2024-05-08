@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'side_bar_widget.dart';
 
+
 class SideBarModel extends FlutterFlowModel<SideBarWidget> {
   late List<bool> _selectionStatus;
   late int _selectedIndex;

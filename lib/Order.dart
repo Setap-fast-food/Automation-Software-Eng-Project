@@ -2,14 +2,13 @@ import 'Item.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 
+
 class Order {
   List<Item> list;
-  late String name;
   late num total;
   late String status;
 
   Order.create(this.list) {
-    name = 'JoeBlogs';
     total = getTotal();
     status = 'active';
   }
@@ -22,7 +21,7 @@ class Order {
     return t;
   }
 
-  Future placeOrder(test) async {
+  Future placeOrder(test, String name) async {
     String order_List = '';
     for (Item value in list) {
       if (value.number > 0) {

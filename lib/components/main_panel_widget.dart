@@ -1,4 +1,5 @@
 import 'package:automation_software_flutter_code/payment/Order.dart';
+import 'package:automation_software_flutter_code/payment/payment.dart';
 
 import 'order_bar_widget.dart';
 import 'package:flutter/material.dart';
@@ -31,28 +32,49 @@ class _MainPanelWidgetState extends State<MainPanelWidget> {
       .collection('Orders')
       .where('status', isEqualTo: 'completed');
   late List<Map<String, dynamic>> items;
+  late List<String> itemsID;
   bool isLoaded = false;
 
   _incrementCounter() async {
     List<Map<String, dynamic>> tempList = [];
+    List<String> idList = [];
     var data = await collection.get();
     var completedData = await collection1.get();
 
     if (flag == 'active') {
       data.docs.forEach((element) {
+        idList.add(element.id);
         tempList.add(element.data());
       });
     } else {
       completedData.docs.forEach((element) {
+        idList.add(element.id);
         tempList.add(element.data());
       });
     }
 
+
     setState(() {
+      itemsID = idList;
       items = tempList;
       isLoaded = true;
     });
   }
+
+  orderCompletion(orderID) async{
+      final orderCollection = FirebaseFirestore.instance.collection('Orders');
+
+      final docRef = orderCollection.doc(orderID);
+
+      try {
+        await docRef.update({
+          "status": "completed"
+        });
+      } catch (error) {
+        print("some error occured $error");
+      }
+
+    }
 
   @override
   void initState() {
@@ -87,6 +109,7 @@ class _MainPanelWidgetState extends State<MainPanelWidget> {
               ? ListView.builder(
                   itemCount: items.length,
                   itemBuilder: (context, index) {
+                    String orderID = itemsID[index];
                     return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: ListTile(
@@ -101,9 +124,10 @@ class _MainPanelWidgetState extends State<MainPanelWidget> {
                             children: [
                               Text(items[index]['name']),
                               SizedBox(
-                                width: 10,
-                              ),
-                              Text(items[index]['order'])
+                                width: 10,),
+                              Text(items[index]['order']),
+                              IconButton(onPressed: () => orderCompletion(orderID),
+                              icon: const Icon(Icons.arrow_forward))
                             ],
                           ),
                         ));
